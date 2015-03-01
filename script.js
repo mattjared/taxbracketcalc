@@ -12,6 +12,9 @@ $('input:radio[name=filingType]').change(function(){
       	else if (value > 37451 && value < 90750 ) {
           indyThird(value);
         }
+        else if (value > 90751 && value < 189300 ) {
+          indyFourth(value);
+        }
     	})
     	.keyup();
   }
@@ -41,5 +44,11 @@ function indySecond(income) {
 function indyThird(income) {
 	var indyThirdTier = .25,
 	answer = 5156.25 + ((income - 37450) * indyThirdTier);
+	$("p").text(answer);
+}
+
+function indyFourth(income) {
+	var indyFourthTier = .28,
+	answer = 18481.25 + ((income - 90750) * indyFourthTier);
 	$("p").text(answer);
 }
