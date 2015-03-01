@@ -2,13 +2,13 @@ var indyFirst = .1;
 
 function indySecond(income) {
   var indySecondTier = .15,
-  answer = (income * indySecondTier) + 995;
+  answer = 922.50 + ((income - 995) * indySecondTier);
  	$("p").text(answer);
 }
 
 function indyThird(income) {
 	var indyThirdTier = .25,
-	answer = (income * indyThirdTier) + 5156.25;
+	answer = 5156.25 + ((income - 37450) * indySecondTier);
 	$("p").text(answer);
 }
 
@@ -24,8 +24,7 @@ $('input:radio[name=filingType]').change(function(){
           $("p").text(indySecond(value));
         }
       	else if (value > 37451 && value < 90750 ) {
-          // $("p").text(indySecond(value));
-          $("p").text("Fuck");
+          $("p").text(indyThird(value));
         }
     	})
     	.keyup();
