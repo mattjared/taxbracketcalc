@@ -9,11 +9,20 @@ $('input:radio[name=filingType]').change(function(){
         else if (value > 9226 && value < 37450) {
           indySecond(value);
         }
-      	else if (value > 37451 && value < 90750 ) {
+      	else if (value > 37451 && value < 90750) {
           indyThird(value);
         }
-        else if (value > 90751 && value < 189300 ) {
+        else if (value > 90751 && value < 189300) {
           indyFourth(value);
+        }
+        else if (value > 189301 && value < 411500) {
+          indyFifth(value);
+        }
+        else if (value > 411501 && value < 413200) {
+          indySixth(value);
+        }
+        else {
+        	indySeventh(value);
         }
     	})
     	.keyup();
@@ -50,5 +59,23 @@ function indyThird(income) {
 function indyFourth(income) {
 	var indyFourthTier = .28,
 	answer = 18481.25 + ((income - 90750) * indyFourthTier);
+	$("p").text(answer);
+}
+
+function indyFifth(income) {
+	var indyFifthTier = .33,
+	answer = 46075.25 + ((income - 189300) * indyFifthTier);
+	$("p").text(answer);
+}
+
+function indySixth(income) {
+	var indySixthTier = .35,
+	answer = 119401.25 + ((income - 411500) * indySixthTier);
+	$("p").text(answer);
+}
+
+function indySeventh(income) {
+	var indySeventhTier = .39,
+	answer = 119996.25 + ((income - 413200) * indySeventhTier);
 	$("p").text(answer);
 }
