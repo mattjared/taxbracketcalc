@@ -47,7 +47,7 @@ var indyFirst = .1;
 function indySecond(income) {
   var indySecondTier = .15,
   answer = 922.50 + ((income - 995) * indySecondTier);
- 	$("p").text(answer);
+ 	$("p").text(answer.toLocaleString());
 }
 
 function indyThird(income) {
