@@ -12,12 +12,13 @@
 	    <input type="radio" name="filingType" id="c" value="c">Married filing Seperate<br>
 	    <input type="radio" name="filingType" id="d" value="d">Head of Household
 	    <br><br>
-	    <label>How much do you make a year?</label><br>
-	    <input type="value" placeholder="your income" id="income">
+	    <label>What is your gross income per year?</label><br>
+	    <input type="text" placeholder="50,000" pattern="[0-9]*" id="income">
 	    <p></p>
 	  </form>
 	</div>
 </body>
 	<script src="jquery.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
 	<script src="script.js"></script>
 </html>
